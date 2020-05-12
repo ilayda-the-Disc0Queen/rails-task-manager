@@ -1,0 +1,13 @@
+<h1>My Tasks</h1>
+<div class="task-card">
+  <ul>
+    <% @tasks.each do |task| %>
+      <label class="container">
+        <li><%= link_to task.title, task_path(task) %>
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </li>
+      </label>
+    <% end %>
+  </ul>
+</div>
